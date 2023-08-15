@@ -1,48 +1,44 @@
 /* Importacion tipografía */
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Great+Vibes&family=Montserrat:wght@200;400;800&family=Nabla&family=Silkscreen&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     /* Puedes personalizar con tus colores favoritos */
-    --color-primario: #8C3E11;
+    --color-primario: #2e77a1;
     --color-secundario: #172601;
     --color-terciario: #FFFFFF;
 }
 
 
-body{
+body {
     background-color: var(--color-primario);
     font-family: 'Silkscreen', cursive;
 }
 
-a{
+a {
     text-decoration: none;
     color: unset;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
 /* header y footer */
 
-header, footer{
+header,
+footer {
     text-align: center;
     padding: 24px;
     color: var(--color-terciario);
     background-color: black;
 }
 
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 
 
 
@@ -74,6 +70,8 @@ footer{
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .card .info {
@@ -83,18 +81,24 @@ footer{
     padding: 10px;
 }
 
+.botonera {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
 
-.card .button {
+
+button {
     text-align: center;
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--color-secundario);
-    color: white;
+    color: rgb(192, 38, 38);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 500ms ease-in-out;
 }
 
 .card .button:hover {
-    background-color: #45a049;
+    background-color: #a35da5;
 }

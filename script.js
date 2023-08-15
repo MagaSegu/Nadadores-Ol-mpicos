@@ -37,8 +37,12 @@ const listadoCartas = [
 const contenedorCartas = document.querySelector(".listadoCartas")
 
 /* Función que recorre el listado de las cartas */
-listadoCartas.forEach(
-    (carta) => contenedorCartas.innerHTML += `
+
+
+function recorrerCartas() {
+    contenedorCartas.innerHTML = ""
+    listadoCartas.forEach(
+        (carta) => contenedorCartas.innerHTML += `
     <article class="card">
         <img src=${carta.imagen} alt="Imagen del proyecto">
         <div class="info">
@@ -46,7 +50,27 @@ listadoCartas.forEach(
             <p>${carta.descripcion}</p>
         </div>
     </article>`
-)
+    )
+}
+function agregarNadador() {
+
+
+
+    const nombre = prompt("Nombre")
+    const imagen = prompt("Imagen")
+    const descripcion = prompt(" Descripcion")
+
+    const carta = { nombre, imagen, descripcion }
+
+
+
+    listadoCartas.push(carta)
+    recorrerCartas()
+
+}
+
+recorrerCartas()
+
 
 
 
